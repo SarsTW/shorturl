@@ -4,7 +4,7 @@
     <title>URL Shortener</title>
     <script>
         async function handleRedirect() {
-            const shortCode = window.location.pathname.slice(1);
+            const shortCode = window.location.pathname.split('/').pop();
             const apiUrl = 'https://script.google.com/macros/s/AKfycbzraTt6ADhKLrVmcS6xcFkQKLCupdCIaZzytv-_RiFE_8RRP2FZFmyAxzc8aF1eqVOf/exec?code=' + shortCode;
 
             try {
